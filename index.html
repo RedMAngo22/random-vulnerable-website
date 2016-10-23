@@ -4,10 +4,20 @@
     <title>Random Vulnerable Websites</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:light,thin" />
     <script>
+      var websites = [];
+      function loadWebsites() {
+        var xhr = new XmlHTTPRequest();
+        xhr.open("list.txt");
+        xhr.addEventListener("load", function(e) {
+          websites = e.responseText.split("\n");
+          nextWebsite();
+        });
+        xhr.send();
+      }
       function nextWebsite() {
         var e = document.getElementById("link");
       }
-      window.addEventListener("load", nextWebsite);
+      window.addEventListener("load", loadWebsites);
     </script>
     <style>
       body {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Vulnerable Websites</title>
+    <script>
+      function nextWebsite() {
+        var e = document.getElementById("link");
+      }
+      window.addEventListener("load", nextWebsite);
+    </script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .card, .button {
+        text-align: center;
+        width: 24em;
+        margin-left: calc(50% - 12em);
+        box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.75);
+      }
+      h1 {
+        font-weight: 0;
+        font-size: 32px;
+      }
+      .card {
+        bakground: #fbfbfb;
+      }
+      .button {
+        bakground: #f04090;
+      }
+      .button:hover {
+        bakground: #ff4f9f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>
+        Take me to another vulnerable website!
+      </h1>
+    </div>
+    <div class="button">
+      <a href="" id="link">Yay!</a>
+    </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <script>
       var websites = [];
       function loadWebsites() {
-        var xhr = new XmlHTTPRequest();
+        var xhr = new XMLHTTPRequest();
         xhr.open("list.txt");
         xhr.addEventListener("load", function(e) {
           websites = e.responseText.split("\n");
